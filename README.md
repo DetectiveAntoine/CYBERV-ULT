@@ -1,106 +1,154 @@
-# Deleted by the owner. Project closed <a href="https://t.me/ErrorFiX_Tv"> Get in touch on TELEGRAM for exclusive course to build pentesting tools (only for education)</a>.
-<p align="center">
-<img src="https://github.com/D3VL/L3MON/raw/master/server/assets/webpublic/logo.png" height="60"><br>
-A cloud-based remote Android management suite, powered by NodeJS 
-</p>
+L3MON — Remote Android Forensic Framework
+A Secure, Cloud-Based Android Device Monitoring Suite Built for Ethical Cybersecurity Investigations
 
-<p>The only way to help us is to visit our YouTube channel and subscribe to our channel, leave your comments on our videos, and follow us on GitHub. Looking forward to your cooperation.</p>
+<p align="center"> <img src="https://github.com/D3VL/L3MON/raw/master/server/assets/webpublic/logo.png" height="60" alt="L3MON Logo" /> </p>
+Overview
+L3MON is a Node.js-based Android Remote Administration Tool (RAT) developed for ethical, educational, and internal testing purposes. It provides a powerful web interface to monitor and interact with Android devices in real time. Designed for cybersecurity professionals and digital forensic investigators, L3MON enables lawful data collection and incident response through a centralized dashboard.
 
-## L3MON Features
-- GPS Logging
-- Microphone Recording
-- View Contacts
-- SMS Logs
-- Send SMS
-- Call Logs
-- View Installed Apps
-- View Stub Permissions
-- Live Clipboard Logging
-- Live Notification Logging
-- View WiFi Networks (logs previously seen)
-- File Explorer & Downloader
-- Command Queuing
-- Built In APK Builder
+⚠️ Disclaimer: This tool is strictly intended for lawful and educational use. Misuse of this software for unauthorized access or illegal surveillance is a criminal offense.
 
-## Prerequisites 
- - Java Runtime Environment 8
-    - See [installation](#Installation) for OS specifics
- - NodeJs 
- - A Server
+🔍 Features
+Real-Time GPS Logging
+Track device location and maintain historical movement data.
 
-## Installation 
-1. Install JRE 8 (We cannot stress this enough USE java 1.8.0 ANY issues that don't use this will be closed WITHOUT a response)
-    - Debian, Ubuntu, Etc
-     - Ubuntu chroot
-        - `sudo apt install wget curl git npm nano nodejs openjdk-8-jdk openjdk-8-jre`
-        - `source <(curl -fsSL https://raw.githubusercontent.com/efxtv/npm/main/apktool/apktool-kali-ubuntu.sh)`
-      - Termux 
-        - `pkg update && pkg upgrade`
-        - `source <(curl -fsSL https://raw.githubusercontent.com/efxtv/npm/main/apktool/apktool-termux.sh) `
-        - `source <(curl -fsSL https://raw.githubusercontent.com/efxtv/npm/main/L3mon-no-java8.sh) `
-        - `curl -L -o $PWD/emsf https://github.com/efxtv/EMSF/blob/main/termux/emsf?raw=true -s;chmod +x emsf;mv emsf ../usr/bin/ `
-    - Fedora, Oracle, Red Hat, etc
-        -  `su -c "yum install java-1.8.0-openjdk"`
-    - Windows 
-        - click [HERE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) for downloads
+Microphone Activation & Audio Recording
+Collect evidence through real-time or triggered recording sessions.
 
-2. Install NodeJS [Instructions Here](https://nodejs.org/en/download/package-manager/) (If you can't figure this out, you shouldn't be using this)
+Comprehensive Device Visibility
 
-3. install PM2 
-    - `npm install pm2 -g`
-    - `npm install`
-    - `npm audit fix`
-    - `npm audit`
-    - `npm audit fix --force`
+Call logs
 
-4. Download and Extract the latest release from [HERE](https://t.me/etxtv)
+Contact lists
 
-5. In the extracted folder, run these commands
-    - `npm install` <- install dependencies
-    - `pm2 start index.js` <-- start the script
-    - `pm2 startup` <- to run L3MON on startup
+Installed applications
 
-6. Set a Username & Password
-    1. Stop L3MON `pm2 stop index`
-    2. Open `maindb.json` in a text editor
-    3. MD5 Hash `echo -n efxtv | openssl md5|awk '{print $2}'`
-    4. under `admin` 
-        - set the `username` as plain text
-        - set the `password` as a LOWERCASE MD5 hash
-    4. save the file
-    5. run `pm2 restart all`
+WiFi network history
 
-7. in your browser navigate to `http://127.0.0.1:22533`
+Message Intelligence
 
-## Notes
-When opening an issue, you **MUST** use the provided templates. Issues without this will not receive support quickly and will be put to the bottom of the figurative pile.
+View SMS history
 
-Please look through the current issues, open and closed to see if your issue has been addressed before. If it's java related, it's most definitely been addressed - In short Use Java 1.8.0
+Send authorized messages for verification/testing
 
-## Screenshots
-| | | |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-|<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/call_log.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/call_log.png"> Call Log</a> | <a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/apk_builder.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/apk_builder.png"> APK Builder</a> |<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/clipboard.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/clipboard.png"> Clipboard Log</a>||
-<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/contacts.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/contacts.png"> Contacts</a>  |  <a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/devices.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/devices.png"> Devices</a>|<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/file_explorer.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/file_explorer.png"> File Explorer</a>||
-<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/gps_log.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/gps_log.png"> GPS Log</a>  | <a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/sms_log.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/sms_log.png"> SMS Log</a> |<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/sms_send.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/sms_send.png"> Send SMS</a>||
-<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/installed_apps.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/installed_apps.png"> Installed Apps</a> | <a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/microphone.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/microphone.png"> Microphone</a> |<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/notification_log.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/notification_log.png"> Notifications</a>||
-<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/event_log.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/event_log.png"> Event Log</a> | <a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/login.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/login.png"> Login</a> |<a href="https://github.com/D3VL/L3MON/raw/master/Screenshots/wifi_manager.png"> <img width="1604" src="https://github.com/D3VL/L3MON/raw/master/Screenshots/wifi_manager.png"> WiFi Manager</a>|
+Live clipboard monitoring
 
-## Thanks
-L3MON Builds off and utilizes several open-source software, Without these, L3MON Wouldn't be what it is!
- - Inspiration for the project and the basic building blocks for the Android App are based on [AhMyth](https://github.com/AhMyth/AhMyth-Android-RAT) 
- - [express](https://github.com/expressjs/express)
- - [node-geoip](https://github.com/bluesmoon/node-geoip)
- - [lowdb](https://github.com/typicode/lowdb)
- - [socket.io](https://github.com/socketio/socket.io)
- - [Open Street Map](https://www.openstreetmap.org)
- - [Leaflet](https://leafletjs.com/)
+Live notification logging
 
-## Disclaimer
-<b>D3VL Provides no warranty with this software and will not be responsible for any direct or indirect damage caused due to the usage of this tool.<br>
-L3MON is built for both Educational and Internal use ONLY.</b>
+File Management
 
-<br>
-<p align="center">Made with ❤️ By <a href="//d3vl.com">D3VL</a></p>
-<p align="center"><a href="https://t.me/EFXTV2021">Telegram</a></p>
-<p align="center" style="font-size: 8px">v1.1.2 <a href="https://github.com/D3VL/L3MON">Credit!</a></p>
+Explore file system
+
+Download key artifacts
+
+Upload tools or forensic utilities if authorized
+
+Command Queuing System
+Schedule or batch forensic actions without user interruption
+
+APK Builder
+Build monitoring payloads tailored to the investigation context.
+
+🔧 Installation Guide
+✅ Prerequisites
+Java Runtime Environment 8 (MANDATORY)
+
+Node.js v14+
+
+Linux or Termux-supported environment (Kali Linux preferred)
+
+PM2 Process Manager (for background task management)
+
+💻 Step-by-Step Setup (Linux)
+bash
+Copy
+Edit
+# Install required dependencies
+sudo apt update && sudo apt install wget curl git npm nodejs openjdk-8-jdk openjdk-8-jre
+
+# Clone the repository
+git clone https://github.com/D3VL/L3MON.git && cd L3MON
+
+# Install Node dependencies
+npm install -g pm2
+npm install
+
+# Start the application
+pm2 start index.js
+pm2 startup
+🔐 Setting Login Credentials
+bash
+Copy
+Edit
+# Stop the service temporarily
+pm2 stop index
+
+# Edit main DB file securely
+nano maindb.json
+
+# Generate hashed password (replace 'yourpassword')
+echo -n yourpassword | openssl md5 | awk '{print $2}'
+Update the JSON:
+
+json
+Copy
+Edit
+"admin": {
+  "username": "admin",
+  "password": "hashed_value_here"
+}
+Restart the server:
+
+bash
+Copy
+Edit
+pm2 restart all
+Access the dashboard:
+
+bash
+Copy
+Edit
+http://127.0.0.1:22533
+⚙️ Ethical Use & Compliance
+This tool is designed to assist lawful digital investigations, incident response simulations, or academic training in:
+
+Mobile Forensics
+
+Remote Evidence Collection
+
+Penetration Testing Simulations
+
+Monitoring Device Behavior in Controlled Environments
+
+Always ensure usage adheres to:
+
+Organizational policy
+
+Legal jurisdiction
+
+Written consent or authorization
+
+📸 UI Snapshots
+Dashboard	Call Logs	GPS Logs
+		
+
+More screenshots available in the repository.
+
+📚 Credits & Dependencies
+L3MON leverages several open-source technologies:
+
+Express.js
+
+Socket.IO
+
+LowDB
+
+Leaflet & OpenStreetMap
+
+Based on AhMyth Android RAT
+
+🚨 Disclaimer
+L3MON is provided as-is, without any warranty. The developer assumes no responsibility for misuse. It is the sole responsibility of the end-user to comply with all applicable laws.
+
+Developed & Secured by
+[Cybersecurity Professional | Digital Forensics Specialist]
+antonymsafiri16@gmail.com.com | 🛡️ Kali Linux · Node.js · Android Security
