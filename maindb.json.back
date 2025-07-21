@@ -1,7 +1,7 @@
 {
   "admin": {
     "username": "admin",
-    "password": "",
+    "password": "cyber12",
     "loginToken": "",
     "logs": [],
     "ipLog": []
